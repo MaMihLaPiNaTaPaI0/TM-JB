@@ -17,11 +17,11 @@
 (function() {
     'use strict';
 
-    // 性能优化标志
+
     let isProcessing = false;
     let processedLinks = new Set();
 
-    // 简约文本样式
+
     const styleId = 'bdpan-link-styles';
     if (!document.getElementById(styleId)) {
         const style = document.createElement('style');
@@ -47,7 +47,7 @@
         document.head.appendChild(style);
     }
 
-    // 文本扫描器
+
     function findShareLinks() {
         if (isProcessing) return;
         isProcessing = true;
@@ -79,19 +79,19 @@
                 const shareCode = match[1];
                 const fullMatch = match[0];
 
-                // 跳过已处理的链接
+
                 if (processedLinks.has(fullMatch)) continue;
                 processedLinks.add(fullMatch);
 
-                // 获取上下文文本
+
                 const contextStart = Math.max(0, match.index - 60);
                 const contextEnd = Math.min(text.length, match.index + fullMatch.length + 60);
                 const context = text.substring(contextStart, contextEnd);
 
-                // 查找密码
+      
                 const password = findPassword(context);
 
-                // 创建链接显示
+       
                 setTimeout(() => {
                     createLinkDisplay(shareCode, password, textNode);
                 }, 0);
@@ -107,7 +107,7 @@
         }
     }
 
-    // 密码查找函数
+
     function findPassword(text) {
         const patterns = [
             /(?:提取码|密码|码|pwd)[:：]?\s*(\w{4})\b/i,
@@ -123,7 +123,7 @@
         return null;
     }
 
-    // 创建纯文本显示
+
     function createLinkDisplay(shareCode, password, textNode) {
         if (!textNode.isConnected) return;
 
@@ -132,7 +132,7 @@
         const parent = textNode.parentNode;
         if (!parent || parent.querySelector(`[data-share="${shareCode}"]`)) return;
 
-        // 创建单独的行显示完整链接
+
         const linkLine = document.createElement('div');
         linkLine.className = 'bdpan-link-line';
         linkLine.dataset.share = shareCode;
@@ -143,7 +143,7 @@
 
         linkLine.appendChild(linkText);
 
-        // 在原始文本后插入新行
+
         if (textNode.nextSibling) {
             parent.insertBefore(linkLine, textNode.nextSibling);
         } else {
@@ -151,7 +151,7 @@
         }
     }
 
-    // 初始化
+
     function init() {
         setTimeout(findShareLinks, 1500);
 
@@ -165,7 +165,7 @@
         });
     }
 
-    // 启动脚本
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
