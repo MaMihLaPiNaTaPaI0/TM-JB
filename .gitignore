@@ -1,3 +1,18 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志/临时文件
+*.log
+*.tmp
+
+# 敏感文件 (重要!)
+.env
+*.key
+*.secret
+
+
+
 # Logs
 logs
 *.log
