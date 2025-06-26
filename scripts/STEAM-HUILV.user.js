@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        STEAM多国汇率悬浮窗 CNY双向换算(STEAM-HUILV)
+// @name        STEAM多国汇率双向换算(STEAM-HUILV)
 // @namespace   https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @version      1.0.0
 // @description  在Steam页面上显示多国汇率悬浮窗，支持双向换算
