@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         STEAM- Augmented中国区域价格比较
+// @name         STEAM-某A插件中国区域价格比较
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @version      1.2
 // @description  强制STEAM商店显示中国区域内容（需配合中国IP使用）
@@ -11,8 +11,8 @@
 // @grant        GM_deleteValue
 // @run-at       document-start
 // @license      MIT
-// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM- Augmented.user.js
-// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM- Augmented.user.js
+// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM-A.user.js
+// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM-A.user.js
 // @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
 // ==/UserScript==
 
