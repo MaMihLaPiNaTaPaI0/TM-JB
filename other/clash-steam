@@ -1,0 +1,29 @@
+
+        # ==================== Steam 智能分流规则集（20250630优化版） ====================
+        # ■ 进程级规则（必须置顶）
+        - PROCESS-NAME,steam.exe,STEAM固定
+        - PROCESS-NAME,steamwebhelper.exe,STEAM固定
+        - PROCESS-NAME,steamservice.exe,STEAM固定
+
+        # ■ CDN直连规则（下载加速核心）
+        - DOMAIN-KEYWORD,akamai,DIRECT
+        - DOMAIN-SUFFIX,steamstatic.com.akamaized.net,DIRECT
+        - DOMAIN-SUFFIX,steamcontent.com.akamaized.net,DIRECT
+        - DOMAIN-SUFFIX,steampipe.akamaized.net,DIRECT
+        - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
+
+        # ■ 核心服务代理（必须走代理）
+        - DOMAIN-SUFFIX,steampowered.com,STEAM固定
+        - DOMAIN-SUFFIX,steamcommunity.com,STEAM固定
+        - DOMAIN-SUFFIX,steam-chat.com,STEAM固定
+        - DOMAIN-SUFFIX,api.steampowered.com,STEAM固定
+        - DOMAIN,partner.steam-api.com,STEAM固定
+        - DOMAIN-SUFFIX,steam-auth.com,STEAM固定
+
+        # ■ 商店服务（强制代理）
+        - DOMAIN-SUFFIX,store.steampowered.com,STEAM固定
+        - DOMAIN,checkout.steampowered.com,STEAM固定
+
+        # ■ 静态资源（非下载）
+        - DOMAIN-SUFFIX,steamstatic.com,STEAM固定
+        - DOMAIN-SUFFIX,steamusercontent.com,STEAM固定
