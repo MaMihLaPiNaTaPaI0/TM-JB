@@ -39,7 +39,7 @@
         ],
         minPartialLength: 5,
         statusElementId: 'nexus-translator-status',
-        cacheExpiryHours: 99999999 // 修复：默认缓存24小时
+        cacheExpiryHours: 1 // 修复：默认缓存1小时
     };
 
     // 词库存储
