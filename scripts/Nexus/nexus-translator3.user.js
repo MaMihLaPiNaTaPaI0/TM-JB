@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Nexus Mods 基础翻译(多词库+智能+缓存设置)
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      4.6.0
-// @description  支持词库缓存、智能匹配和动态内容翻译
+// @version      3.0.0
+// @description  支持多词库缓存、智能匹配和动态内容翻译
 // @author       MaMihLaPiNaTaPaI0
 // @license      MIT
 // @homepage     https://github.com/MaMihLaPiNaTaPaI0/TM-JB
