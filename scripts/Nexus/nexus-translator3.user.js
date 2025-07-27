@@ -39,7 +39,7 @@
         ],
         minPartialLength: 5,
         statusElementId: 'nexus-translator-status',
-        cacheExpiryHours: 1 // 修复：默认缓存1小时
+        cacheExpiryHours: 24 // 默认缓存24小时
     };
 
     // 词库存储
@@ -53,7 +53,7 @@
     GM_addStyle(`
         #${CONFIG.statusElementId} {
             position: fixed;
-            bottom: 20px;
+            bottom: 220px;
             right: 20px;
             padding: 10px 15px;
             background: #2c3e50;
@@ -167,9 +167,17 @@
                                     const data = JSON.parse(response.responseText);
                                     resolve({ success: true, data, url });
                                 } catch (e) {
-                                    log(`❌ JSON解析失败: ${url} - ${e.message}`);
+                                    // 增强错误信息
+                                    const errorPosition = e.message.match(/position (\d+)/);
+                                    let errorDetails = e.message;
+                                    if (errorPosition) {
+                                        const pos = parseInt(errorPosition[1]);
+                                        const sample = response.responseText.substring(Math.max(0, pos-20), Math.min(response.responseText.length, pos+20));
+                                        errorDetails = `${e.message} (附近内容: "${sample}")`;
+                                    }
+                                    log(`❌ JSON解析失败: ${url} - ${errorDetails}`);
                                     updateStatus(`词库解析错误: ${e.message}`, 'error');
-                                    resolve({ success: false, error: e.message, url });
+                                    resolve({ success: false, error: errorDetails, url });
                                 }
                             } else {
                                 log(`❌ 加载失败: ${url} - HTTP ${response.status}`);
@@ -358,7 +366,7 @@
 
         // 处理"No. 数字"的空格变体
         if (text.includes("No. ")) {
-            const normalizedText = text.replace(/No\.\s+(\d)/g, "No.\$1");
+            const normalizedText = text.replace(/No\.\s+(\d)/g, "No.\\$1");
             if (dictionaries[normalizedText]) {
                 log(`√ 空格规范化匹配: "${text}" -> "${dictionaries[normalizedText]}"`);
                 return dictionaries[normalizedText];
@@ -451,27 +459,22 @@
                   .join(' ');
     }
 
-    // 日期翻译函数
+    // 日期翻译函数（关键修改：优先使用词库翻译）
     function translateDate(text) {
+        // 优先检查词库中的月份翻译
+        if (dictionaries[text]) {
+            return dictionaries[text]; // 返回个人词库的带缩写版本
+        }
+
         // 如果已经是中文日期格式，直接返回
         if (text.match(/\d{4}年\d{1,2}月\d{1,2}日/)) {
             return text;
         }
 
-        const months = {
-            'January': '1月', 'Jan': '1月',
-            'February': '2月', 'Feb': '2月',
-            'March': '3月', 'Mar': '3月',
-            'April': '4月', 'Apr': '4月',
-            'May': '5月',
-            'June': '6月', 'Jun': '6月',
-            'July': '7月', 'Jul': '7月',
-            'August': '8月', 'Aug': '8月',
-            'September': '9月', 'Sep': '9月',
-            'October': '10月', 'Oct': '10月',
-            'November': '11月', 'Nov': '11月',
-            'December': '12月', 'Dec': '12月'
-        };
+        const months = {'January': '1月(Jan)', 'Jan': '1月(Jan)', 'February': '2月(Feb)', 'Feb': '2月(Feb)', 'March': '3月(Mar)', 'Mar': '3月(Mar)', 'April': '4月(Apr)', 'Apr': '4月(Apr)', 'May': '5月(May)', 'June': '6月(Jun)', 'Jun': '6月(Jun)', 'July': '7月(Jul)', 'Jul': '7月(Jul)', 'August': '8月(Aug)', 'Aug': '8月(Aug)', 'September': '9月(Sep)', 'Sep': '9月(Sep)', 'October': '10月(Oct)', 'Oct': '10月(Oct)', 'November': '11月(Nov)', 'Nov': '11月(Nov)', 'December': '12月(Dec)', 'Dec': '12月(Dec)'};
+        //const months = {'January': '1月', 'Jan': '1月', 'February': '2月', 'Feb': '2月', 'March': '3月', 'Mar': '3月', 'April': '4月', 'Apr': '4月', 'May': '5月', 'June': '6月', 'Jun': '6月', 'July': '7月', 'Jul': '7月', 'August': '8月', 'Aug': '8月', 'September': '9月', 'Sep': '9月', 'October': '10月', 'Oct': '10月', 'November': '11月', 'Nov': '11月', 'December': '12月', 'Dec': '12月'};
+
+
         const timeMap = {
             'AM': '上午', 'PM': '下午',
             'am': '上午', 'pm': '下午'
