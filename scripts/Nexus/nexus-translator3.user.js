@@ -31,7 +31,7 @@
         timeout: 10000,
         dictionaryUrls: [
             'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/dictionary.json',
-            'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/Personal%20dictionary.json'
+            //'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/Personal%20dictionary.json'
         ],
         ignoredSelectors: [
             'script', 'style', 'noscript', 'textarea',
