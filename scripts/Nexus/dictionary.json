@@ -22,12 +22,16 @@
   "About this mod": "关于此模组",
   "You last downloaded a file from this mod on": "您上次下载此模组文件的时间：",
   "downloaded": "下载",
-  "Report Abuse": "举报滥用",
+  "举报 Abuse": "举报滥用",
   "Share": "分享",
   "Requirements": "要求",
   "Permissions and credits": "权限与致谢",
   "Changelogs": "更新日志",
   "Logs": "日志",
+  "Unique DLs": "唯一下载量",
+  "Total DLs": "总下载量",
+  "Total 查看数": "总查看数",
+  "Version": "版本"
 
   
   "Mods": "模组",
