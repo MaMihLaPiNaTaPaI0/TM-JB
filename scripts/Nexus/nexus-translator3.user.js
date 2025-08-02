@@ -1,23 +1,32 @@
 // ==UserScript==
-// @name         Nexus Mods 基础翻译(多词库+智能+缓存设置)
+// @name         Nexus Mods 智能翻译系统 (多词库/缓存/动态)
+// @name:en      Nexus Mods Smart Translator (Multi-Dict/Cache/Dynamic)
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      3.0.0
-// @description  支持多词库缓存、智能匹配和动态内容翻译
+// @version      3.0.1
+// @description  高级翻译解决方案，支持多词库管理、智能缓存系统和实时动态翻译
+// @description:en Advanced translator with multi-dictionary, smart caching and dynamic content support
 // @author       MaMihLaPiNaTaPaI0
 // @license      MIT
-// @homepage     https://github.com/MaMihLaPiNaTaPaI0/TM-JB
+// @homepageURL  https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
+// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-translator3.user.js
+// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-translator3.user.js
 // @match        https://www.nexusmods.com/*
 // @match        https://next.nexusmods.com/*
 // @icon         https://www.nexusmods.com/favicon.ico
-// @grant        GM_xmlhttpRequest
-// @grant        GM_addStyle
-// @grant        GM_setValue
-// @grant        GM_getValue
-// @grant        GM_registerMenuCommand
+// @icon64       https://www.nexusmods.com/favicon.ico
+// @grant        GM.xmlHttpRequest
+// @grant        GM.addStyle
+// @grant        GM.setValue
+// @grant        GM.getValue
+// @grant        GM.registerMenuCommand
+// @grant        GM.notification
 // @connect      raw.githubusercontent.com
+// @connect      api.github.com
 // @run-at       document-start
 // @noframes
+// @require      https://cdn.jsdelivr.net/npm/fuzzysort@1.1.4/fuzzysort.min.js
+// @antifeature  tracking
 // ==/UserScript==
 
 (function() {
