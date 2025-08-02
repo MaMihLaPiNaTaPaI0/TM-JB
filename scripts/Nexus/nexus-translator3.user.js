@@ -3,7 +3,7 @@
 // @name:zh      Nexus Mods 基础翻译 (多词库/缓存/动态)
 // @name:en      Nexus Mods Basic Translation (Multiple thesaurus/cache/dynamic)
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      3.0.1
+// @version      6.0.0
 // @description  基础翻译网站标题，支持多词库管理、智能缓存系统和实时动态翻译
 // @description:en Advanced translator with multi-dictionary, smart caching and dynamic content support
 // @author       MaMihLaPiNaTaPaI0
