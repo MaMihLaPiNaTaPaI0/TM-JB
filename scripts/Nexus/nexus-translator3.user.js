@@ -1,9 +1,10 @@
 // ==UserScript==
-// @name         Nexus Mods 智能翻译系统 (多词库/缓存/动态)
-// @name:en      Nexus Mods Smart Translator (Multi-Dict/Cache/Dynamic)
+// @name         Nexus Mods 基础翻译 (多词库/缓存/动态)
+// @name:zh      Nexus Mods 基础翻译 (多词库/缓存/动态)
+// @name:en      Nexus Mods Basic Translation (Multiple thesaurus/cache/dynamic)
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @version      3.0.1
-// @description  高级翻译解决方案，支持多词库管理、智能缓存系统和实时动态翻译
+// @description  基础翻译网站标题，支持多词库管理、智能缓存系统和实时动态翻译
 // @description:en Advanced translator with multi-dictionary, smart caching and dynamic content support
 // @author       MaMihLaPiNaTaPaI0
 // @license      MIT
