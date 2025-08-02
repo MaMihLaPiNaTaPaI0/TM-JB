@@ -1,5 +1,7 @@
 // ==UserScript==
 // @name         Nexus Mods Black
+// @name:zh      Nexus Mods 关键词屏蔽
+// @name:en      Nexus Mods Black
 // @namespace    https://www.nexusmods.com/
 // @version      6.0
 // @description  Hide mods containing blacklisted keywords on Nexus Mods
