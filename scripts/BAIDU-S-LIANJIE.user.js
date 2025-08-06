@@ -3,7 +3,7 @@
 // @name:zh      百度S链接(BAIDU-S-LIANJIE)
 // @name:en      Baidu S-Link
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      1.0.0
+// @version      3.3.3
 // @description  在百度网盘分享页面下方显示完整URL
 // @description:zh 在百度网盘分享页面下方显示完整URL
 // @description:en Show full URL under Baidu Netdisk share links
@@ -180,5 +180,6 @@
         init();
     }
 })();
+
 
 
