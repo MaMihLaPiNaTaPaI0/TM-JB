@@ -27,7 +27,7 @@
 // @run-at       document-start
 // @noframes
 // @require      https://cdn.jsdelivr.net/npm/fuzzysort@1.1.4/fuzzysort.min.js
-// @antifeature  tracking
+
 // ==/UserScript==
 
 
