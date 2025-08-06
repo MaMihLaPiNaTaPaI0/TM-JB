@@ -1,15 +1,24 @@
 // ==UserScript==
 // @name        STEAM多国汇率双向换算(STEAM-HUILV)
+// @name:zh     STEAM多国汇率双向换算(STEAM-HUILV)
+// @name:en     STEAM Multi-Currency Converter
 // @namespace   https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @version      1.0.0
 // @description  在Steam页面上显示多国汇率悬浮窗，支持双向换算
-// @author       zhouyang
-// @match        *://store.steampowered.com/*
-// @run-at       document-idle
+// @description:zh 在Steam页面上显示多国汇率悬浮窗，支持双向换算
+// @description:en Display multi-currency floating window on Steam pages with bidirectional conversion
+// @author       MaMihLaPiNaTaPaI0
 // @license      MIT
+// @homepageURL  https://github.com/MaMihLaPiNaTaPaI0/TM-JB
+// @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
 // @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM-HUILV.user.js
 // @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM-HUILV.user.js
-// @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
+// @match        *://store.steampowered.com/*
+// @run-at       document-idle
+// @icon         https://github.com/MaMihLaPiNaTaPaI0.png
+// @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
+// @noframes
+// @antifeature  tracking
 // ==/UserScript==
 
 
@@ -400,4 +409,5 @@ class RateManager {
 
     updateAllDisplays();
 })();
+
 
