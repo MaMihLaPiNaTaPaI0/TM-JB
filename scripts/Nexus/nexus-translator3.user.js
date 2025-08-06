@@ -533,7 +533,7 @@
                 updateStatus(`重新加载词库 (${retryCount}/${CONFIG。maxRetries})`， 'loading');
                 loadDictionaries();
             }
-        }, 10000);
+        }， 10000);
     }
 
     function log(message) {
