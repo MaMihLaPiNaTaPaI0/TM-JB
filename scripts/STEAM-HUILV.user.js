@@ -3,7 +3,7 @@
 // @name:zh     STEAM多国汇率双向换算(STEAM-HUILV)
 // @name:en     STEAM Multi-Currency Converter
 // @namespace   https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      1.0.0
+// @version      3.3.3
 // @description  在Steam页面上显示多国汇率悬浮窗，支持双向换算
 // @description:zh 在Steam页面上显示多国汇率悬浮窗，支持双向换算
 // @description:en Display multi-currency floating window on Steam pages with bidirectional conversion
@@ -409,6 +409,7 @@ class RateManager {
 
     updateAllDisplays();
 })();
+
 
 
 
