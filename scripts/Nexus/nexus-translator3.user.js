@@ -3,8 +3,8 @@
 // @name:zh      Nexus Mods 基础翻译 (多词库/缓存/动态)
 // @name:en      Nexus Mods Basic Translation (Multiple thesaurus/cache/dynamic)
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      6.6.7
-// @description  基础翻译网站标题，支持多词库管理、智能缓存系统和实时动态翻译
+// @version      6.6.6
+// @description  基础翻译网站标题,支持多词库管理、智能缓存系统和实时动态翻译
 // @description:en Advanced translator with multi-dictionary, smart caching and dynamic content support
 // @author       MaMihLaPiNaTaPaI0
 // @license      MIT
@@ -37,15 +37,15 @@
     const CONFIG = {
         debug: true,
         maxRetries: 3,
-        retryDelay: 3000,
+        retryDelay: 3000，
         timeout: 10000,
         dictionaryUrls: [
-            'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/dictionary.json',
+            'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/dictionary.json'，
             'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/Personal%20dictionary.json'
         ],
         ignoredSelectors: [
             'script', 'style', 'noscript', 'textarea',
-            'pre', 'code', '.no-translate', 'svg', 'path'
+            'pre', 'code'， '.no-translate', 'svg', 'path'
         ],
         minPartialLength: 5,
         statusElementId: 'nexus-translator-status',
@@ -59,7 +59,7 @@
     let retryCount = 0;
 
     GM_addStyle(`
-        #${CONFIG.statusElementId} {
+        #${CONFIG。statusElementId} {
             position: fixed;
             bottom: 220px;
             right: 20px;
@@ -73,16 +73,16 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             transition: opacity 0.3s;
         }
-        #${CONFIG.statusElementId}.success {
+        #${CONFIG。statusElementId}.success {
             background: #27ae60;
         }
-        #${CONFIG.statusElementId}.error {
+        #${CONFIG。statusElementId}.error {
             background: #e74c3c;
         }
-        #${CONFIG.statusElementId}.loading {
+        #${CONFIG。statusElementId}.loading {
             background: #f39c12;
         }
-        #${CONFIG.statusElementId}.cache {
+        #${CONFIG。statusElementId}.cache {
             background: #9b59b6;
         }
     `);
@@ -150,7 +150,7 @@
             return;
         }
 
-        log(forceReload ? '强制刷新词库...' : '缓存已过期或不存在，重新加载词库...');
+        log(forceReload ? '强制刷新词库...' : '缓存已过期或不存在,重新加载词库...');
         updateStatus(forceReload ? '强制刷新词库...' : '重新加载词库...', 'loading');
 
         const loadPromises = CONFIG.dictionaryUrls.map((url, index) => {
@@ -188,8 +188,8 @@
                         onerror: function(error) {
                             if (currentRetry < CONFIG.maxRetries) {
                                 currentRetry++;
-                                log(`⚠️ 网络错误: ${url}，重试中 (${currentRetry}/${CONFIG.maxRetries})`);
-                                updateStatus(`网络错误，重试中 (${currentRetry}/${CONFIG.maxRetries})`, 'loading');
+                                log(`⚠️ 网络错误: ${url},重试中 (${currentRetry}/${CONFIG.maxRetries})`);
+                                updateStatus(`网络错误,重试中 (${currentRetry}/${CONFIG.maxRetries})`, 'loading');
                                 setTimeout(tryLoad, CONFIG.retryDelay * currentRetry);
                             } else {
                                 log(`❌ 最终失败: ${url} - ${error}`);
@@ -200,8 +200,8 @@
                         ontimeout: function() {
                             if (currentRetry < CONFIG.maxRetries) {
                                 currentRetry++;
-                                log(`⏱️ 超时: ${url}，重试中 (${currentRetry}/${CONFIG.maxRetries})`);
-                                updateStatus(`请求超时，重试中 (${currentRetry}/${CONFIG.maxRetries})`, 'loading');
+                                log(`⏱️ 超时: ${url},重试中 (${currentRetry}/${CONFIG.maxRetries})`);
+                                updateStatus(`请求超时,重试中 (${currentRetry}/${CONFIG.maxRetries})`, 'loading');
                                 setTimeout(tryLoad, CONFIG.retryDelay * currentRetry);
                             } else {
                                 log(`❌ 加载超时: ${url}`);
@@ -220,7 +220,7 @@
             let newDictionaries = {};
             let hasSuccess = false;
 
-            results。forEach((result, index) => {
+            results.forEach((result, index) => {
                 if (result.status === 'fulfilled') {
                     const value = result.value;
                     if (value.success) {
@@ -228,7 +228,7 @@
                         newDictionaries = { ...newDictionaries, ...value.data };
                         log(`✅ 词库加载成功: ${value.url} (${Object.keys(value.data).length}条)`);
                     } else {
-                        log(`❌ 词库加载失败: ${value。url} - ${value.error}`);
+                        log(`❌ 词库加载失败: ${value.url} - ${value.error}`);
                     }
                 }
             });
@@ -236,21 +236,21 @@
             if (hasSuccess) {
                 dictionaries = newDictionaries;
                 GM_setValue('cachedDictionaries', dictionaries);
-                GM_setValue('dictionariesCacheTimestamp'， Date。当前());
-                log(`词库已缓存，有效期: ${CONFIG。cacheExpiryHours}小时`);
-                updateStatus('词库加载完成'， 'success');
+                GM_setValue('dictionariesCacheTimestamp', Date.当前());
+                log(`词库已缓存,有效期: ${CONFIG.cacheExpiryHours}小时`);
+                updateStatus('词库加载完成', 'success');
             } else {
                 if (cachedDictionaries) {
                     dictionaries = cachedDictionaries;
                     sortedDictionaryKeys = Object.keys(dictionaries).sort((a, b) => b.length - a.length);
                     const ageHours = ((Date.now() - cacheTimestamp) / (1000 * 60 * 60)).toFixed(1);
-                    log(`所有词库加载失败，使用过期缓存（${ageHours}小时前）`);
-                    updateStatus(`使用过期缓存（${ageHours}小时前）`， 'cache');
+                    log(`所有词库加载失败,使用过期缓存（${ageHours}小时前）`);
+                    updateStatus(`使用过期缓存（${ageHours}小时前）`, 'cache');
                 } else {
                     dictionaries = {};
                     sortedDictionaryKeys = [];
-                    log('所有词库加载失败，且无缓存可用');
-                    updateStatus('词库加载失败，且无缓存'， 'error');
+                    log('所有词库加载失败,且无缓存可用');
+                    updateStatus('词库加载失败,且无缓存', 'error');
                 }
             }
 
@@ -262,44 +262,44 @@
         isLoaded = true;
         sortedDictionaryKeys = Object.keys(dictionaries).sort((a, b) => b.length - a.length);
         const totalEntries = sortedDictionaryKeys.length;
-        log(`词库加载完成，总计${totalEntries}条`);
-        updateStatus(`翻译器已就绪 (${totalEntries}条词库)`， 'success');
+        log(`词库加载完成,总计${totalEntries}条`);
+        updateStatus(`翻译器已就绪 (${totalEntries}条词库)`, 'success');
         translateDocument();
     }
 
     function translateDocument() {
         if (!isLoaded) {
-            log('词库未加载，跳过翻译');
+            log('词库未加载,跳过翻译');
             return;
         }
 
         log('开始翻译文档...');
-        const startTime = performance。当前();
-        translateElement(document。body);
+        const startTime = performance.当前();
+        translateElement(document.body);
         const duration = performance.当前() - startTime;
-        log(`文档翻译完成，耗时: ${duration。toFixed(2)}ms`);
+        log(`文档翻译完成,耗时: ${duration.toFixed(2)}ms`);
     }
 
     function translateElement(element) {
         if (!element || shouldIgnore(element)) return;
 
-        if (element。nodeType === Node。TEXT_NODE) {
+        if (element.nodeType === Node.TEXT_NODE) {
             translateTextNode(element);
             return;
         }
 
-        ['title'， 'placeholder'， 'alt'， 'value']。forEach(attr => {
-            if (element。hasAttribute(attr)) {
+        ['title', 'placeholder', 'alt', 'value'].forEach(attr => {
+            if (element.hasAttribute(attr)) {
                 const value = element.getAttribute(attr);
                 const translated = translateText(value);
                 if (translated !== value) {
-                    element。setAttribute(attr, translated);
+                    element.setAttribute(attr, translated);
                 }
             }
         });
 
-        element。childNodes。forEach(child => {
-            if (child.nodeType === Node.TEXT_NODE) {
+        element。childNodes.forEach(child => {
+            if (child。nodeType === Node.TEXT_NODE) {
                 translateTextNode(child);
             } else if (child.nodeType === Node.ELEMENT_NODE) {
                 translateElement(child);
@@ -312,7 +312,7 @@
     }
 
     function translateTextNode(node) {
-        const original = node.textContent.trim();
+        const original = node。textContent.trim();
         if (!original) return;
 
         const dateTranslated = translateDate(original);
@@ -331,7 +331,7 @@
         if (!text) return text;
 
         if (text.includes("You last downloaded a file from this mod on")) {
-            const datePart = text.replace("You last downloaded a file from this mod on", "").trim();
+            const datePart = text.替换("You last downloaded a file from this mod on"， "").trim();
             const translatedDate = translateDate(datePart);
             return `您上次下载此模组文件的时间：${translatedDate}`;
         }
@@ -361,15 +361,15 @@
         if (cleanedText.length >= CONFIG.minPartialLength) {
             for (const key of sortedDictionaryKeys) {
                 const cleanedKey = cleanText(key);
-                if (cleanedKey.length < CONFIG.minPartialLength) continue;
+                if (cleanedKey。length < CONFIG。minPartialLength) continue;
 
                 if (cleanedText.includes(cleanedKey)) {
                     log(`√ 部分匹配: "${text}" -> 替换"${key}"为"${dictionaries[key]}"`);
                     return text.replace(key, dictionaries[key]);
                 }
 
-                if (cleanedText.toLowerCase().includes(cleanedKey.toLowerCase())) {
-                    const result = text.replace(new RegExp(key, 'i'), dictionaries[key]);
+                if (cleanedText。toLowerCase()。includes(cleanedKey。toLowerCase())) {
+                    const result = text.替换(new RegExp(key， 'i'), dictionaries[key]);
                     log(`√ 部分匹配(不区分大小写): "${text}" -> "${result}" (匹配词: ${key})`);
                     return result;
                 }
@@ -377,8 +377,8 @@
         }
 
         const normalizedText = normalizeText(text);
-        if (normalizedText.length >= CONFIG.minPartialLength) {
-            for (const key of sortedDictionaryKeys) {
+        if (normalizedText。length >= CONFIG.minPartialLength) {
+            for (const key / sortedDictionaryKeys) {
                 const normalizedKey = normalizeText(key);
                 if (normalizedKey.length < CONFIG.minPartialLength) continue;
 
@@ -502,7 +502,7 @@
             if (!isLoaded) return;
 
             mutations。forEach(mutation => {
-                if (mutation.输入 === 'childList') {
+                if (mutation。输入 === 'childList') {
                     mutation。addedNodes。forEach(node => {
                         if (node。nodeType === Node。ELEMENT_NODE) {
                             translateElement(node);
@@ -515,8 +515,8 @@
         });
 
         observer。observe(document。body， {
-            childList: true,
-            subtree: true,
+            childList: true，
+            subtree: true，
             characterData: true，
             attributes: true，
             attributeFilter: ['title'， 'placeholder'， 'alt'， 'value']
@@ -529,7 +529,7 @@
         setInterval(() => {
             if (!isLoaded && retryCount < CONFIG。maxRetries) {
                 retryCount++;
-                log(`词库未加载，重新加载 (${retryCount}/${CONFIG。maxRetries})`);
+                log(`词库未加载,重新加载 (${retryCount}/${CONFIG。maxRetries})`);
                 updateStatus(`重新加载词库 (${retryCount}/${CONFIG。maxRetries})`， 'loading');
                 loadDictionaries();
             }
@@ -543,7 +543,7 @@
     }
 
     function startScript() {
-        if (document。readyState === 'complete') {
+        if (document.readyState === 'complete') {
             init();
         } else {
             document。addEventListener('DOMContentLoaded'， init);
