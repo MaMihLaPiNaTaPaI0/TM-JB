@@ -13,6 +13,7 @@
 // @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
 // @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/IDM/IDM-blocker.user.js
 // @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/IDM/IDM-blocker.user.js
+
 // @match        *://*.internetdownloadmanager.com/*
 // @match        *://*/*
 // @run-at       document-start
