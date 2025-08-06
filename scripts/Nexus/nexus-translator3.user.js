@@ -3,7 +3,7 @@
 // @name:zh      Nexus Mods 基础翻译 (多词库/缓存/动态)
 // @name:en      Nexus Mods Basic Translation (Multiple thesaurus/cache/dynamic)
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      6.6.6
+// @version      6.6.7
 // @description  基础翻译网站标题,支持多词库管理、智能缓存系统和实时动态翻译
 // @description:en Advanced translator with multi-dictionary, smart caching and dynamic content support
 // @author       MaMihLaPiNaTaPaI0
@@ -37,15 +37,15 @@
     const CONFIG = {
         debug: true,
         maxRetries: 3,
-        retryDelay: 3000，
+        retryDelay: 3000,
         timeout: 10000,
         dictionaryUrls: [
-            'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/dictionary.json'，
+            'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/dictionary.json',
             'https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/Personal%20dictionary.json'
         ],
         ignoredSelectors: [
             'script', 'style', 'noscript', 'textarea',
-            'pre', 'code'， '.no-translate', 'svg', 'path'
+            'pre', 'code', '.no-translate', 'svg', 'path'
         ],
         minPartialLength: 5,
         statusElementId: 'nexus-translator-status',
@@ -59,7 +59,7 @@
     let retryCount = 0;
 
     GM_addStyle(`
-        #${CONFIG。statusElementId} {
+        #${CONFIG.statusElementId} {
             position: fixed;
             bottom: 220px;
             right: 20px;
@@ -73,16 +73,16 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             transition: opacity 0.3s;
         }
-        #${CONFIG。statusElementId}.success {
+        #${CONFIG.statusElementId}.success {
             background: #27ae60;
         }
-        #${CONFIG。statusElementId}.error {
+        #${CONFIG.statusElementId}.error {
             background: #e74c3c;
         }
-        #${CONFIG。statusElementId}.loading {
+        #${CONFIG.statusElementId}.loading {
             background: #f39c12;
         }
-        #${CONFIG。statusElementId}.cache {
+        #${CONFIG.statusElementId}.cache {
             background: #9b59b6;
         }
     `);
@@ -298,8 +298,8 @@
             }
         });
 
-        element。childNodes.forEach(child => {
-            if (child。nodeType === Node.TEXT_NODE) {
+        element.childNodes.forEach(child => {
+            if (child.nodeType === Node.TEXT_NODE) {
                 translateTextNode(child);
             } else if (child.nodeType === Node.ELEMENT_NODE) {
                 translateElement(child);
@@ -312,7 +312,7 @@
     }
 
     function translateTextNode(node) {
-        const original = node。textContent.trim();
+        const original = node.textContent.trim();
         if (!original) return;
 
         const dateTranslated = translateDate(original);
@@ -331,7 +331,7 @@
         if (!text) return text;
 
         if (text.includes("You last downloaded a file from this mod on")) {
-            const datePart = text.替换("You last downloaded a file from this mod on"， "").trim();
+            const datePart = text.replace("You last downloaded a file from this mod on", "").trim();
             const translatedDate = translateDate(datePart);
             return `您上次下载此模组文件的时间：${translatedDate}`;
         }
@@ -361,15 +361,15 @@
         if (cleanedText.length >= CONFIG.minPartialLength) {
             for (const key of sortedDictionaryKeys) {
                 const cleanedKey = cleanText(key);
-                if (cleanedKey。length < CONFIG。minPartialLength) continue;
+                if (cleanedKey.length < CONFIG.minPartialLength) continue;
 
                 if (cleanedText.includes(cleanedKey)) {
                     log(`√ 部分匹配: "${text}" -> 替换"${key}"为"${dictionaries[key]}"`);
                     return text.replace(key, dictionaries[key]);
                 }
 
-                if (cleanedText。toLowerCase()。includes(cleanedKey。toLowerCase())) {
-                    const result = text.替换(new RegExp(key， 'i'), dictionaries[key]);
+                if (cleanedText.toLowerCase().includes(cleanedKey.toLowerCase())) {
+                    const result = text.replace(new RegExp(key, 'i'), dictionaries[key]);
                     log(`√ 部分匹配(不区分大小写): "${text}" -> "${result}" (匹配词: ${key})`);
                     return result;
                 }
@@ -377,8 +377,8 @@
         }
 
         const normalizedText = normalizeText(text);
-        if (normalizedText。length >= CONFIG.minPartialLength) {
-            for (const key / sortedDictionaryKeys) {
+        if (normalizedText.length >= CONFIG.minPartialLength) {
+            for (const key of sortedDictionaryKeys) {
                 const normalizedKey = normalizeText(key);
                 if (normalizedKey.length < CONFIG.minPartialLength) continue;
 
@@ -501,10 +501,10 @@
         observer = new MutationObserver(mutations => {
             if (!isLoaded) return;
 
-            mutations。forEach(mutation => {
-                if (mutation。输入 === 'childList') {
-                    mutation。addedNodes。forEach(node => {
-                        if (node。nodeType === Node。ELEMENT_NODE) {
+            mutations.forEach(mutation => {
+                if (mutation.输入 === 'childList') {
+                    mutation.addedNodes.forEach(node => {
+                        if (node.nodeType === Node.ELEMENT_NODE) {
                             translateElement(node);
                         } else if (node.nodeType === Node.TEXT_NODE && node.parentNode) {
                             translateTextNode(node);
@@ -514,12 +514,12 @@
             });
         });
 
-        observer。observe(document。body， {
-            childList: true，
-            subtree: true，
-            characterData: true，
-            attributes: true，
-            attributeFilter: ['title'， 'placeholder'， 'alt'， 'value']
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+            characterData: true,
+            attributes: true,
+            attributeFilter: ['title', 'placeholder', 'alt', 'value']
         });
 
         log('DOM观察者已启动');
@@ -527,18 +527,18 @@
 
     function startHealthCheck() {
         setInterval(() => {
-            if (!isLoaded && retryCount < CONFIG。maxRetries) {
+            if (!isLoaded && retryCount < CONFIG.maxRetries) {
                 retryCount++;
-                log(`词库未加载,重新加载 (${retryCount}/${CONFIG。maxRetries})`);
-                updateStatus(`重新加载词库 (${retryCount}/${CONFIG。maxRetries})`， 'loading');
+                log(`词库未加载,重新加载 (${retryCount}/${CONFIG.maxRetries})`);
+                updateStatus(`重新加载词库 (${retryCount}/${CONFIG.maxRetries})`, 'loading');
                 loadDictionaries();
             }
-        }， 10000);
+        }, 10000);
     }
 
     function log(message) {
-        if (CONFIG。debug) {
-            console。log(`[NexusTranslator] ${new Date()。toLocaleTimeString()} - ${message}`);
+        if (CONFIG.debug) {
+            console.log(`[NexusTranslator] ${new Date().toLocaleTimeString()} - ${message}`);
         }
     }
 
@@ -546,8 +546,8 @@
         if (document.readyState === 'complete') {
             init();
         } else {
-            document。addEventListener('DOMContentLoaded'， init);
-            window。addEventListener('load'， init);
+            document.addEventListener('DOMContentLoaded', init);
+            window.addEventListener('load', init);
         }
     }
 
