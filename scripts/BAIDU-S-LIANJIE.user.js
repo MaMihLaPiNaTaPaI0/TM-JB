@@ -18,7 +18,6 @@
 // @icon         https://github.com/MaMihLaPiNaTaPaI0.png
 // @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
 // @noframes
-// @antifeature  tracking
 // ==/UserScript==
 
 
@@ -181,4 +180,5 @@
         init();
     }
 })();
+
 
