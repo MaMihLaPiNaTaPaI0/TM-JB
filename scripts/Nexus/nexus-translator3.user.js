@@ -14,8 +14,8 @@
 // @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-translator3.user.js
 // @match        https://www.nexusmods.com/*
 // @match        https://next.nexusmods.com/*
-// @icon         https://www.nexusmods.com/favicon.ico
-// @icon64       https://www.nexusmods.com/favicon.ico
+// @icon         https://github.com/MaMihLaPiNaTaPaI0.png
+// @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
 // @grant        GM.xmlHttpRequest
 // @grant        GM.addStyle
 // @grant        GM.setValue
