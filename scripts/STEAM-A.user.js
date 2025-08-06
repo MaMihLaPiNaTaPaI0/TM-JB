@@ -1,22 +1,32 @@
 // ==UserScript==
 // @name         STEAM-某A插件中国区域价格比较
+// @name:zh      STEAM-某A插件中国区域价格比较
+// @name:en      STEAM China Region Price Comparator
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @version      1.2
 // @description  强制STEAM商店显示中国区域内容（需配合中国IP使用）
-// @author       zhouyang
+// @description:zh 强制STEAM商店显示中国区域内容（需配合中国IP使用）
+// @description:en Force Steam store to display China region content (requires Chinese IP)
+// @author       MaMihLaPiNaTaPaI0
+// @license      MIT
+// @homepageURL  https://github.com/MaMihLaPiNaTaPaI0/TM-JB
+// @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
+// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM-A.user.js
+// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM-A.user.js
 // @match        *://store.steampowered.com/*
 // @match        *://steamcommunity.com/*
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_deleteValue
 // @run-at       document-start
-// @license      MIT
-// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM-A.user.js
-// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/STEAM-A.user.js
-// @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
+// @icon         https://github.com/MaMihLaPiNaTaPaI0.png
+// @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
+// @noframes
+// @antifeature  tracking
 // ==/UserScript==
 
-// ==/UserScript==
+
+
 
 (function() {
     'use strict';
