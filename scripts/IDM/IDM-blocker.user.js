@@ -11,16 +11,17 @@
 // @license      MIT
 // @homepageURL  https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
-// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/IDM/IDM-blocker.user.js
-// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/IDM/IDM-blocker.user.js
+// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/IDM/idm-blocker.user.js
+// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/IDM/idm-blocker.user.js
 // @match        *://*/*
+
 // @run-at       document-start
 // @grant        window.close
 // @grant        GM.setValue
 // @grant        GM.getValue
 // @grant        GM.registerMenuCommand
-// @icon         https://cdn.jsdelivr.net/gh/doublesweet01/BS_script@master/image/sweet.jpg
-// @icon64       https://cdn.jsdelivr.net/gh/doublesweet01/BS_script@master/image/sweet.jpg
+// @icon         https://github.com/MaMihLaPiNaTaPaI0.png
+// @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
 // @noframes
 // @antifeature  tracking
 // ==/UserScript==
