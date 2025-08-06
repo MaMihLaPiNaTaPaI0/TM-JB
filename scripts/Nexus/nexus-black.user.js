@@ -2,21 +2,26 @@
 // @name         Nexus Mods Black
 // @name:zh      Nexus Mods 关键词屏蔽
 // @name:en      Nexus Mods Black
-// @namespace    https://www.nexusmods.com/
+// @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @version      6.0
 // @description  Hide mods containing blacklisted keywords on Nexus Mods
+// @description:zh  在Nexus Mods上隐藏包含黑名单关键词的模组
+// @description:en  Hide mods containing blacklisted keywords on Nexus Mods
 // @author       MaMihLaPiNaTaPaI0
 // @license      MIT
-// @homepage     https://github.com/MaMihLaPiNaTaPaI0/TM-JB
+// @homepageURL  https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
 // @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-black.user.js
 // @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-black.user.js
-// @include      http://www.nexusmods.com/*
-// @include      https://www.nexusmods.com/*
+// @match        *://www.nexusmods.com/*
 // @run-at       document-idle
 // @grant        GM_addStyle
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @icon         https://github.com/MaMihLaPiNaTaPaI0.png
+// @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
+// @noframes
+// @antifeature  tracking
 // ==/UserScript==
 
 (function() {
