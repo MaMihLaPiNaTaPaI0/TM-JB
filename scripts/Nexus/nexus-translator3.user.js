@@ -3,7 +3,7 @@
 // @name:zh      Nexus Mods 基础翻译 (多词库/缓存/动态)
 // @name:en      Nexus Mods Basic Translation (Multiple thesaurus/cache/dynamic)
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      6.6.6
+// @version      7.7.7
 // @description  基础翻译网站标题,支持多词库管理、智能缓存系统和实时动态翻译
 // @description:en Advanced translator with multi-dictionary, smart caching and dynamic content support
 // @author       MaMihLaPiNaTaPaI0
@@ -16,20 +16,17 @@
 // @match        https://next.nexusmods.com/*
 // @icon         https://github.com/MaMihLaPiNaTaPaI0.png
 // @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
-// @grant        GM.xmlHttpRequest
-// @grant        GM.addStyle
-// @grant        GM.setValue
-// @grant        GM.getValue
-// @grant        GM.registerMenuCommand
-// @grant        GM.notification
+// @grant        GM_xmlhttpRequest
+// @grant        GM_addStyle
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_registerMenuCommand
+// @grant        GM_notification
 // @connect      raw.githubusercontent.com
 // @connect      api.github.com
 // @run-at       document-start
 // @noframes
-// @require      https://cdn.jsdelivr.net/npm/fuzzysort@1.1.4/fuzzysort.min.js
-
 // ==/UserScript==
-
 
 (function() {
     'use strict';
@@ -136,8 +133,8 @@
     function loadDictionaries(forceReload = false) {
         log('开始加载词库...');
 
-        const cachedDictionaries = GM_getValue('cachedDictionaries');
-        const cacheTimestamp = GM_getValue('dictionariesCacheTimestamp');
+        const cachedDictionaries = GM_getValue('cachedDictionaries', null);
+        const cacheTimestamp = GM_getValue('dictionariesCacheTimestamp', 0);
         const cacheExpiry = CONFIG.cacheExpiryHours * 60 * 60 * 1000;
 
         if (!forceReload && cachedDictionaries && cacheTimestamp && (Date.now() - cacheTimestamp < cacheExpiry)) {
@@ -153,7 +150,7 @@
         log(forceReload ? '强制刷新词库...' : '缓存已过期或不存在,重新加载词库...');
         updateStatus(forceReload ? '强制刷新词库...' : '重新加载词库...', 'loading');
 
-        const loadPromises = CONFIG.dictionaryUrls.map((url, index) => {
+        const loadPromises = CONFIG.dictionaryUrls.map((url) => {
             return new Promise((resolve) => {
                 let currentRetry = 0;
 
@@ -220,7 +217,7 @@
             let newDictionaries = {};
             let hasSuccess = false;
 
-            results.forEach((result, index) => {
+            results.forEach((result) => {
                 if (result.status === 'fulfilled') {
                     const value = result.value;
                     if (value.success) {
@@ -230,13 +227,15 @@
                     } else {
                         log(`❌ 词库加载失败: ${value.url} - ${value.error}`);
                     }
+                } else {
+                    log(`❌ 词库加载失败: ${result.reason}`);
                 }
             });
 
             if (hasSuccess) {
                 dictionaries = newDictionaries;
                 GM_setValue('cachedDictionaries', dictionaries);
-                GM_setValue('dictionariesCacheTimestamp', Date.当前());
+                GM_setValue('dictionariesCacheTimestamp', Date.now());
                 log(`词库已缓存,有效期: ${CONFIG.cacheExpiryHours}小时`);
                 updateStatus('词库加载完成', 'success');
             } else {
@@ -274,9 +273,9 @@
         }
 
         log('开始翻译文档...');
-        const startTime = performance.当前();
+        const startTime = performance.now();
         translateElement(document.body);
-        const duration = performance.当前() - startTime;
+        const duration = performance.now() - startTime;
         log(`文档翻译完成,耗时: ${duration.toFixed(2)}ms`);
     }
 
@@ -298,13 +297,14 @@
             }
         });
 
-        element.childNodes.forEach(child => {
+        for (let i = 0; i < element.childNodes.length; i++) {
+            const child = element.childNodes[i];
             if (child.nodeType === Node.TEXT_NODE) {
                 translateTextNode(child);
             } else if (child.nodeType === Node.ELEMENT_NODE) {
                 translateElement(child);
             }
-        });
+        }
     }
 
     function shouldIgnore(element) {
@@ -342,7 +342,7 @@
         }
 
         if (text.includes("No. ")) {
-            const normalizedText = text.replace(/No\.\s+(\d)/g, "No.\\\\$1");
+            const normalizedText = text.replace(/No\.\s+(\d)/g, "No.\\\\\$1");
             if (dictionaries[normalizedText]) {
                 log(`√ 空格规范化匹配: "${text}" -> "${dictionaries[normalizedText]}"`);
                 return dictionaries[normalizedText];
@@ -391,7 +391,7 @@
 
         if (text.match(/\d/)) {
             for (const numKey of sortedDictionaryKeys) {
-                if (!numKey.match(/\d/)) continue;
+                if (!/\d/.test(numKey)) continue;
 
                 const numNormalized = normalizeText(numKey);
                 if (numNormalized === normalizedText) {
@@ -435,7 +435,20 @@
             return text;
         }
 
-        const months = {'January': '1月(Jan)', 'Jan': '1月(Jan)', 'February': '2月(Feb)', 'Feb': '2月(Feb)', 'March': '3月(Mar)', 'Mar': '3月(Mar)', 'April': '4月(Apr)', 'Apr': '4月(Apr)', 'May': '5月(May)', 'June': '6月(Jun)', 'Jun': '6月(Jun)', 'July': '7月(Jul)', 'Jul': '7月(Jul)', 'August': '8月(Aug)', 'Aug': '8月(Aug)', 'September': '9月(Sep)', 'Sep': '9月(Sep)', 'October': '10月(Oct)', 'Oct': '10月(Oct)', 'November': '11月(Nov)', 'Nov': '11月(Nov)', 'December': '12月(Dec)', 'Dec': '12月(Dec)'};
+        const months = {
+            'January': '1月(Jan)', 'Jan': '1月(Jan)', 
+            'February': '2月(Feb)', 'Feb': '2月(Feb)', 
+            'March': '3月(Mar)', 'Mar': '3月(Mar)', 
+            'April': '4月(Apr)', 'Apr': '4月(Apr)', 
+            'May': '5月(May)', 
+            'June': '6月(Jun)', 'Jun': '6月(Jun)', 
+            'July': '7月(Jul)', 'Jul': '7月(Jul)', 
+            'August': '8月(Aug)', 'Aug': '8月(Aug)', 
+            'September': '9月(Sep)', 'Sep': '9月(Sep)', 
+            'October': '10月(Oct)', 'Oct': '10月(Oct)', 
+            'November': '11月(Nov)', 'Nov': '11月(Nov)', 
+            'December': '12月(Dec)', 'Dec': '12月(Dec)'
+        };
 
         const timeMap = {
             'AM': '上午', 'PM': '下午',
@@ -502,7 +515,7 @@
             if (!isLoaded) return;
 
             mutations.forEach(mutation => {
-                if (mutation.输入 === 'childList') {
+                if (mutation.type === 'childList') {
                     mutation.addedNodes.forEach(node => {
                         if (node.nodeType === Node.ELEMENT_NODE) {
                             translateElement(node);
