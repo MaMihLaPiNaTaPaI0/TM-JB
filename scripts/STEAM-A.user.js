@@ -3,7 +3,7 @@
 // @name:zh      STEAM-某A插件中国区域价格比较
 // @name:en      STEAM China Region Price Comparator
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      1.2
+// @version      3.3.3
 // @description  强制STEAM商店显示中国区域内容（需配合中国IP使用）
 // @description:zh 强制STEAM商店显示中国区域内容（需配合中国IP使用）
 // @description:en Force Steam store to display China region content (requires Chinese IP)
