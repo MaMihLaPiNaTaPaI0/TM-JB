@@ -22,8 +22,8 @@
 // @grant        GM_xmlhttpRequest
 // @connect      open.er-api.com
 // @run-at       document-idle
-// @icon         https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg
-// @icon64       https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg
+// @icon         https://github.com/MaMihLaPiNaTaPaI0.png
+// @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
 // @noframes
 // ==/UserScript==
 
