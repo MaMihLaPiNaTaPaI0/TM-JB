@@ -1,15 +1,24 @@
 // ==UserScript==
 // @name         百度S链接(BAIDU-S-LIANJIE)
-// @namespace   https://github.com/MaMihLaPiNaTaPaI0/TM-JB
+// @name:zh      百度S链接(BAIDU-S-LIANJIE)
+// @name:en      Baidu S-Link
+// @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @version      1.0.0
-// @description  在百度网盘链接下方另起一行显示完整URL
-// @author       zhouyang
-// @match        *://*/*
-// @run-at       document-idle
+// @description  在百度网盘分享页面下方显示完整URL
+// @description:zh 在百度网盘分享页面下方显示完整URL
+// @description:en Show full URL under Baidu Netdisk share links
+// @author       MaMihLaPiNaTaPaI0
 // @license      MIT
+// @homepageURL  https://github.com/MaMihLaPiNaTaPaI0/TM-JB
+// @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
 // @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/BAIDU-S-LIANJIE.user.js
 // @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/BAIDU-S-LIANJIE.user.js
-// @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
+// @match        *://pan.baidu.com/*
+// @run-at       document-idle
+// @icon         https://github.com/MaMihLaPiNaTaPaI0.png
+// @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
+// @noframes
+// @antifeature  tracking
 // ==/UserScript==
 
 
@@ -172,3 +181,4 @@
         init();
     }
 })();
+
