@@ -3,7 +3,7 @@
 // @name:zh      Nexus Mods 关键词屏蔽
 // @name:en      Nexus Mods Black
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      6.0
+// @version      6.6.6
 // @description  Hide mods containing blacklisted keywords on Nexus Mods
 // @description:zh  在Nexus Mods上隐藏包含黑名单关键词的模组
 // @description:en  Hide mods containing blacklisted keywords on Nexus Mods
