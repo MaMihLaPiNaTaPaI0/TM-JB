@@ -3,7 +3,7 @@
 // @name:zh      Nexus Mod ID 显示
 // @name:en      Nexus Mod ID Display
 // @namespace    https://github.com/MaMihLaPiNaTaPaI0/TM-JB
-// @version      1.0
+// @version      3.3.3
 // @description  Display MOD ID on Nexus Mods pages
 // @description:zh  在Nexus Mods页面显示MOD ID
 // @description:en  Display MOD ID on Nexus Mods pages
