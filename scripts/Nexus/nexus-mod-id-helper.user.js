@@ -11,8 +11,8 @@
 // @license      MIT
 // @homepageURL  https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
-// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-id-helper.user.js
-// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-id-helper.user.js
+// @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-mod-id-helper.user.js
+// @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/Nexus/nexus-mod-id-helper.user.js
 // @match        *://www.nexusmods.com/*
 // @match        *://next.nexusmods.com/*
 // @run-at       document-idle
