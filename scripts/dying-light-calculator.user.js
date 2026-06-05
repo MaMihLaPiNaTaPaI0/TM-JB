@@ -6,7 +6,7 @@
 // @version      6.6.6
 // @description  帮助计算游戏内购物品总价和所需代币
 // @description:en Optimized calculator for Dying Light in-app purchases with all features
-// @author       YourName
+// @author       MaMihLaPiNaTaPaI0
 // @license      MIT
 // @homepageURL  https://github.com/MaMihLaPiNaTaPaI0/TM-JB
 // @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
