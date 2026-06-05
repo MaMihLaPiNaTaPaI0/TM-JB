@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         PUBG.plus武器统计与缓存（20260301增强版）
+// @namespace    http://tampermonkey.net/
 // @version      17.2
 // @description  武器统计、缓存对比、导入导出、锁定保护、重命名功能
 
-// @match        https://pubg.plus/*
 // @updateURL    https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/PUBG/pubgwuqi.user.js
 // @downloadURL  https://raw.githubusercontent.com/MaMihLaPiNaTaPaI0/TM-JB/main/scripts/PUBG/pubgwuqi.user.js
 
@@ -13,16 +13,17 @@
 // @supportURL   https://github.com/MaMihLaPiNaTaPaI0/TM-JB/issues
 // @icon         https://github.com/MaMihLaPiNaTaPaI0.png
 // @icon64       https://github.com/MaMihLaPiNaTaPaI0.png
+
 // @license      MIT
-// @grant        GM_addStyle
-// @grant        GM_xmlhttpRequest
+// @match        https://pubg.plus/*
 // @grant        GM_setValue
 // @grant        GM_getValue
-// @run-at       document-idle
+// @grant        GM_deleteValue
+// @grant        GM_listValues
+// @grant        GM_addStyle
+// @grant        GM_setClipboard
+// @run-at       document-end
 // ==/UserScript==
-
-
-
 
 (function() {
     'use strict';
