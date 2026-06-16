@@ -1,0 +1,20 @@
+r:".*<sprite name\="stat.*"=$0
+
+
+
+
+r:"(?i)^VIP$"=VIP
+r:"(?i)^Activate$"=激活
+r:"(?i)^Inactive$"=未激活
+r:"(?i)^VIP Activate$"=VIP已激活
+r:"(?i)^VIP Inactive$"=VIP未激活
+r:"(?i)^a.PEN.$"=穿甲
+r:"(?i)^Free$"=免费
+
+sr:"^(Are you sure you want to send off )(.*?)( to the villages nearby\?<br>This will free up a slot to hire another Champion or Worker, but you will not be able to recall her back\.)$"=$1$2$3
+Are you sure you want to send off =你确定要送
+to the villages nearby?<br>This will free up a slot to hire another Champion or Worker, but you will not be able to recall her back.=去附近的村庄吗？<br>这将腾出一个位置来雇用另一个冠军或工人，但你将无法召回她。
+   
+Challenge: StupidJones=挑战：愚蠢的琼斯
+sr:"^(Challenge: )(.*?)$"=$1$2
+Challenge: =挑战：

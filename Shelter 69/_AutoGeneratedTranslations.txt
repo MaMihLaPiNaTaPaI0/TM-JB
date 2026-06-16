@@ -1,0 +1,64 @@
+﻿Extreme Slide=极限滑行
+Naked Rhode=裸体罗德
+Naked Gaia=裸体盖亚
+Sara's Style=萨拉的风格
+Armors over {{A}}% capacity=超过 {{A}}% 容量的装甲
+Leave=离开
+JULIAN=朱利安
+Gr{{A}}zzli=Gr{{A}}zzli
+Bonepile Skirmish=骨堆冲突
+Wreckage War=残骸战争
+<i>The Overseer lay face-down on the bed, his muscular frame finally unwinding after hours of overseeing patrols, resource allocations, and addressing diplomatic tensions.</i>=<i>督军面朝下躺在床上，经过数小时的监督巡逻、资源分配和解决外交紧张局势后，他肌肉发达的身躯终于放松下来。</i>
+<i>XX, ever the devoted healer of body and spirit, knelt beside him in her flowing white silks, her slender fingers glistening as she worked the soothing oil into his tense back with gentle, practiced strokes.</i>=<i>XX，永远是身体和精神的忠实治愈者，穿着飘逸的白色丝绸跪在他身边，她纤细的手指闪闪发光，用温柔而熟练的抚摸将舒缓油涂抹在他紧张的背部。</i>
+<i>Her long blonde hair cascaded like a veil, brushing against his skin as she leaned in, her blue eyes filled with tender concern.</i>=<i>她的金发长发像面纱一样垂下来，拂过他的皮肤，她倾身而下，蓝色的眼睛里充满了温柔的关切。</i>
+Oh, my beloved Overseer... your muscles are knotted like the vines that reclaim the Wilderness outside. Allow me to ease this burden...=哦，我心爱的督军……你的肌肉就像收复外面荒野的藤蔓一样打结。\n让我减轻这个负担...
+The Goddesses would surely bless such devotion. This tension...=女神们一定会保佑这样的奉献。\n这种紧张...
+Surely a result of your work. Tell me, how fares the Shelter this eve? I have heard whispers from the newest recruits - those eager souls drawn to our haven.=肯定是你工作的结果。\n告诉我，今晚避难所的票价如何？\n我听到了新招募的人的窃窃私语——那些渴望来到我们避风港的灵魂。
+They seem... Overly fervent in their desires to commune with you, perchance more than in lending their hands to the labors of rebuilding.=他们似乎……过于热切地渴望与你交流，或许比伸出双手参与重建工作更热切。
+<i>The Overseer let out a low groan of relief as her thumbs pressed into a particularly tight spot along his shoulders, the oil warming under her touch.</i>=<i>当她的拇指按在监督者肩膀上一个特别紧的地方时，监督者松了口气，油在她的触摸下变暖了。</i>
+<i>He shifted slightly, his voice muffled against the pillow.</i>=<i>他微微动了动，声音在枕头上低沉。</i>
+Yeah... it's been a headache. Half of them show up wide-eyed, talking about "serving the cause" by jumping straight into my bed.=是啊……一直头疼。\n其中一半人睁大眼睛出现，直接跳到我的床上谈论“为事业服务”。
+Don't get me wrong, it's flattering, but we're short on hands for scavenging runs and maintenance.=别误会我的意思，这很讨人喜欢，但我们缺乏清理工作和维护的人手。
+And with winter creeping in - those early frosts are already hitting the outer patrols - with how wide we've spread, we can't afford slackers.=随着冬天的临近——早霜已经袭击了外围巡逻队——我们已经蔓延得如此之广，我们不能再偷懒了。
+Foraging's gonna be a nightmare soon; bunker stockpiles are decent, but not endless, and we've got villages to take care of.=觅食很快就会变成一场噩梦；\n掩体库存充足，但并非无穷无尽，而且我们还有村庄需要照顾。
+Truly, the chill winds of the season do herald trials anew... I worry for our sisters venturing forth, their baskets returning lighter with each passing day.=确实，这个季节的寒风预示着新的考验……我担心我们的姐妹们冒险前行，她们的篮子一天比一天轻。
+Yet, you bear the weight of it all upon these broad shoulders, my dear Crazy{{A}}eating{{B}}lemons.=然而，我亲爱的 Crazy{{A}}eating{{B}}lemons，您将这一切的重担扛在了宽阔的肩膀上。
+The Goddesses smile upon your tireless service - your care for every soul within these walls, your guidance that binds us in harmony.=女神们对你们不知疲倦的服务微笑——你们对墙内每一个灵魂的关怀，你们将我们和谐地联系在一起的指导。
+I... I thank you from the depths of my heart, with all the passion of our sacred Way. But... you seem so weary.=我……我以我们神圣之道的全部热情，从内心深处感谢你们。\n但是……你看起来很疲倦。
+Please... Promise me you will seek more rest; it pains me to see you thus expended...=请...答应我你会寻求更多的休息；\n看到你如此消耗我很痛苦......
+<i>Her voice trailed off into a soft ellipsis of concern, her hands slowing to a loving caress along his spine.</i>=<i>她的声音渐渐减弱，变成了关切的轻柔省略，她的双手慢慢地沿着他的脊椎爱抚着。</i>
+<i>Crazy6eating9lemons sighed, rolling his neck to glance back at her, his eyes heavy with the day's fatigue.</i>=<i>Crazy6eating9lemons 叹了口气，转过脖子回头看了她一眼，双眼因一天的疲劳而沉重。</i>
+I appreciate it, XX. Really. But I can't just take a vacation - the bunker doesn't run itself.=我很感激，XX。\n真的。\n但我不能只是去度假——地堡不会自己运行。
+Everyone's counting on me, from the patrols to construction programs.=从巡逻到施工项目，每个人都指望我。
+These little moments? They're gold. Especially with your hands working magic like this.=这些小时刻？\n它们是金子。\n尤其是你的双手能像这样施展魔法。
+...Oh! Your words warm me more than any hearth, my Overseer...=...哦！\n你的话比任何壁炉都更温暖我，我的监督者……
+<i>She blushed faintly, her cheeks tinting pink as she averted her eyes briefly.</i>=<i>她的脸微微红了，双颊染上粉红色，她短暂地移开了视线。</i>
+Might... might I offer such ministrations more regularly, then? To soothe your aches, to envelop you in the comfort you so richly deserve?=那么……我可以更经常地提供这样的服务吗？\n为了缓解您的疼痛，让您享受您应得的舒适感？
+<i>The Overseer closed his eyes with a bittersweet sigh.</i>=<i>督军闭上眼睛，苦涩地叹了口气。</i>
+I'd love that. Goddesses know I would.=我很乐意。\n女神们都知道我会的。
+But time's the enemy - there's always another crisis, another decision.=但时间是敌人——总会有另一场危机，另一场决定。
+I barely get to just... enjoy your company without the world knocking.=我几乎无法在没有世界敲门的情况下享受你的陪伴。
+<i>XX's expression softened into pure adoration, and she leaned forward, wrapping her arms around him in a full-body embrace, her soft curves pressing warmly against his back through the thin fabric of her attire.</i>=<i>XX的表情变得柔和，变成了纯粹的崇拜，她向前倾身，用双臂拥抱着他，柔软的曲线透过薄薄的衣服温暖地贴在他的背上。</i>
+<i>Her breath was hot against his ear as she nuzzled closer, one hand trailing lower with deliberate, erotic intent, fingers gliding over his hips toward his nethers, rubbing the oil in slow, teasing circles that stirred unmistakable heat.</i>=<i>当她用鼻子蹭近时，她的呼吸在他的耳朵上变得滚烫，一只手带着故意的、色情的意图垂下，手指滑过他的臀部，滑向他的下体，缓慢地、挑逗性地画圈摩擦油，激起明显的热量。</i>
+Then know this, my cherished one - I am here to serve you, whenever the need arises, body and soul. Let me be your respite, your vessel of pleasure and peace...=那么请知道这一点，我所珍爱的人——无论何时，只要身体和灵魂有需要，我都会在这里为你服务。\n让我成为你的休息之所，你的快乐与平安的容器......
+<i>The Overseer tensed in slight surprise, a low gasp escaping him as her touch ignited sparks of desire. He turned onto his back, his gaze meeting hers - those blue eyes now smoldering with devotion.</i>=<i>督军略微惊讶地紧张起来，当她的触摸点燃了欲望的火花时，他低声喘息。\n他转过身来，与她的目光相遇——那双蓝眼睛现在充满了虔诚。</i>
+<i>XX smiled tenderly, leaning down to capture his lips in a deep, lingering kiss, her tongue dancing with his in a promise of release.</i>=<i>XX温柔地微笑着，俯身在他的唇上留下了一个深深的、缠绵的吻，她的舌头与他一起舞动，承诺着释放。</i>
+Shh... release your worries, your inhibitions, all that weighs upon you. I shall take care of you fully, as the Goddesses intended - let me worship you now...=嘘...释放你的忧虑、你的压抑以及所有压在你身上的事情。\n我会如女神所愿，全力照顾你——现在让我崇拜你……
+<i>Her hands moved with expert grace, slipping lower to free him from his confines, the oil slick and inviting.</i>=<i>她的双手以熟练的优雅动作，向下滑动，将他从油腻而诱人的束缚中释放出来。</i>
+<i>She positioned herself between his legs, her lips parting in anticipation as she lowered her head, ready to envelop him in the warm, attentive bliss of her mouth - the ultimate reward for his unending devotion.</i>=<i>她把自己放在他的双腿之间，低下头，嘴唇张开，准备将他包裹在她嘴里温暖、专注的幸福之中——这是对他无​​尽忠诚的最终回报。</i>
+Olivia’s velvet questions strip the stoic Overseer bare - teasing his hidden hunger for genuine passion, until restraint crumbles and she claims the fevered surrender his schedule never allows.=奥利维亚温柔的问题让坚忍的督军暴露无遗——戏弄他隐藏的对真正激情的渴望，直到克制崩溃，她声称他的日程安排不允许他狂热地投降。
+<style\=ColorPink>0</style>/110=<style\=ColorPink>0</style>/110
+<style\=ColorPink>0</style>/80=<style\=ColorPink>0</style>/80
+<style\=ColorPink>0</style>/12=<style\=ColorPink>0</style>/12
+Enhance Rarity of {{A}} clothes (tops/bottoms/suits).=提高 {{A}} 衣服（上衣/下装/套装）的稀有度。
+New Digs=新址
+Prepare For Love=为爱做好准备
+Glittering Prizes=闪闪发光的奖品
+
+
+Secret Locations=秘密地点
+Visit a Secret Location during Expedition=探险期间访问秘密地点
+Personalized Frozen Pack=个性化冷冻包
+Complete Campers Campaign Mission=完成营员竞选任务
+Upgrade Training Grounds to {{A}}th Level=将训练场升级至 {{A}} 等级
+Invite New Champion=邀请新冠军
