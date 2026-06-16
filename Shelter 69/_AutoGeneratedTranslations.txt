@@ -2,7 +2,7 @@
 Naked Rhode=裸体罗德
 Naked Gaia=裸体盖亚
 Sara's Style=萨拉的风格
-Armors over {{A}}% capacity=超过 {{A}}% 容量的装甲
+Armors over {{A}}% capacity=衣服容量超过 {{A}}%
 Leave=离开
 JULIAN=朱利安
 Gr{{A}}zzli=Gr{{A}}zzli
