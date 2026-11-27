@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steam 一键移除（取关鉴赏家 / 取关游戏 / 清空愿望单）
 // @version      6.6.6
-// @description  steam一键取关鉴赏家，取关游戏，清空愿望单。（美化版 + 手动 SteamID）
+// @description  steam一键取关鉴赏家，取关游戏，清空愿望单。（美化 + 手动 SteamID）
 // @match        *://store.steampowered.com/*
 // @match        *://steamcommunity.com/*
 
